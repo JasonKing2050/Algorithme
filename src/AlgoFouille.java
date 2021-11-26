@@ -4,6 +4,15 @@
 
 
 public class AlgoFouille {
+
+    /**
+     * Fouille binaire non recursive
+     * @param tableau
+     * @param element
+     * @param <E>
+     * @return
+     * @throws ElementNonPresent
+     */
     public static <E extends Comparable<E>> int FouilleBinaire(E[] tableau, E element)
             throws ElementNonPresent{
         {
@@ -25,6 +34,17 @@ public class AlgoFouille {
             return debut;
         }
     }
+
+
+    /**
+     * Fouille binaire recursive
+     * @param tableau
+     * @param element
+     * @param debut
+     * @param fin
+     * @param <E>
+     * @return
+     */
     public static < E extends Comparable< E > >
         int FouilleBinaireR( E [] tableau, E element, int debut, int fin ){
 

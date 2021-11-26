@@ -4,7 +4,6 @@ public class Principal {
     public static void main(String[] args) {
 
         Fraction [] a = new Fraction[8]  ;
-        Fraction b = new Fraction(2,9);
 
         a[7] = new Fraction(2,1);
         a[6] = new Fraction(2,2);
@@ -14,14 +13,20 @@ public class Principal {
         a[2] = new Fraction(2,6);
         a[1] = new Fraction(2,7);
         a[0] = new Fraction(2,8);
-        
+
+        //Fraction b sert a entrer la valeur recherchée...
+        Fraction b = new Fraction(2,9);
+
         try {
+            //Fouille binaire récursive..
             int r = AlgoFouille.FouilleBinaireR(a,b,0,a.length);
             if (r < 0){
                 System.out.println("Pas présent");
             }else {
                 System.out.println(AlgoFouille.FouilleBinaireR(a,b,0,a.length));
             }
+
+            //Fouille binaire non récursive..
             System.out.println(AlgoFouille.FouilleBinaire(a,b));
 
         }catch
